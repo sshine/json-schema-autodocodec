@@ -12,3 +12,19 @@ executable autodojsonschema
     aeson-pretty,
     bytestring
   default-language: Haskell2010
+
+test-suite autodojsonschema-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs: test
+  build-depends:
+    base ^>=4.18,
+    autodocodec,
+    autodocodec-schema,
+    aeson,
+    hspec,
+    hspec-discover
+  other-modules:
+    PersonSpec
+  default-language: Haskell2010
+  build-tool-depends: hspec-discover:hspec-discover

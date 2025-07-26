@@ -18,6 +18,10 @@ clean:
 shell:
     nix-shell
 
+# Run tests
+test:
+    nix-shell --run "cabal test"
+
 # Update cabal package list
 update:
     nix-shell --run "cabal update"
